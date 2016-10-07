@@ -37,11 +37,11 @@ Vao.prototype = {
    *   @param {Program} prg the nanogl Program
    *   @param {ArrayBuffer[]} buffers an array of ArrayBuffers containing the attributes
    */
-  setup : function( prg, buffers ){
+  setup : function( prg, buffers, indices ){
     if( !prg.ready ){
       prg._grabParameters();
     }
-    this._impl.setup( prg, buffers );
+    this._impl.setup( prg, buffers, indices );
   },
 
   /**
@@ -81,7 +81,7 @@ NativeVao.prototype = {
   },
 
 
-  setup : function( prg, buffers ){
+  setup : function( prg, buffers, indices ){
     this.release();
     var ext = this._vao._ext;
 
@@ -90,6 +90,10 @@ NativeVao.prototype = {
 
     for (var i = 0; i < buffers.length; i++) {
       buffers[i].attribPointer( prg );
+    }
+
+    if( indices !== undefined ){
+      indices.bind();
     }
 
     ext.bindVertexArrayOES( null );
@@ -136,18 +140,23 @@ EmulateVao.prototype = {
     this._vao = null;
     this.prg = null;
     this.buffers = null;
+    this.indices = null;
   },
 
 
-  setup : function( prg, buffers ){
+  setup : function( prg, buffers, indices ){
     this.prg = prg;
     this.buffers = buffers;
+    this.indices = indices;
   },
 
 
   bind : function(){
     for (var i = 0; i < this.buffers.length; i++) {
       this.buffers[i].attribPointer( this.prg );
+    }
+    if( this.indices !== undefined ){
+      this.indices.bind();
     }
   },
 
