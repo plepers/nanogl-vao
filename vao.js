@@ -1,5 +1,12 @@
 
 
+function shimGL( gl, ext ){
+  gl.bindVertexArray   = function(){ return ext.bindVertexArrayOES  .apply( ext, arguments );};
+  gl.createVertexArray = function(){ return ext.createVertexArrayOES.apply( ext, arguments );};
+  gl.deleteVertexArray = function(){ return ext.deleteVertexArrayOES.apply( ext, arguments );};
+  gl.isVertexArray     = function(){ return ext.isVertexArrayOES    .apply( ext, arguments );};
+}
+
 /**
  * @class
  * @classdesc Vao manage attributes pointers setup for given arraybuffer and program
@@ -10,12 +17,17 @@
 function Vao( gl ){
   this.gl = gl;
 
-  this._ext = gl.getExtension( 'OES_vertex_array_object' );
 
-  if( this._ext ){
+  if( gl.bindVertexArray !== undefined ){
     this._impl = new NativeVao( this );
   } else {
-    this._impl = new EmulateVao( this );
+    var ext = gl.getExtension( 'OES_vertex_array_object' );
+    if( ext ){
+      shimGL( gl, ext );
+      this._impl = new NativeVao( this );
+    } else {
+      this._impl = new EmulateVao( this );
+    }
   }
 
 }
@@ -29,7 +41,6 @@ Vao.prototype = {
   dispose : function(){
     this._impl.dispose();
     this._impl = null;
-    this._ext = null;
   },
 
   /**
@@ -64,7 +75,7 @@ Vao.prototype = {
 
 
 // ---------------------------
-//   Native Implementation
+//   Native Implementation Webgl1 extension or Webgl2 native
 // ---------------------------
 
 function NativeVao( vao ){
@@ -83,10 +94,10 @@ NativeVao.prototype = {
 
   setup : function( prg, buffers, indices ){
     this.release();
-    var ext = this._vao._ext;
+    var gl = this._vao.gl;
 
-    this._handle = ext.createVertexArrayOES();
-    ext.bindVertexArrayOES( this._handle );
+    this._handle = gl.createVertexArray();
+    gl.bindVertexArray( this._handle );
 
     for (var i = 0; i < buffers.length; i++) {
       buffers[i].attribPointer( prg );
@@ -96,26 +107,23 @@ NativeVao.prototype = {
       indices.bind();
     }
 
-    ext.bindVertexArrayOES( null );
+    gl.bindVertexArray( null );
   },
 
 
   bind : function(){
-    var ext = this._vao._ext;
-    ext.bindVertexArrayOES( this._handle );
+    this._vao.gl.bindVertexArray( this._handle );
   },
 
 
   unbind : function(){
-    var ext = this._vao._ext;
-    ext.bindVertexArrayOES( null );
+    this._vao.gl.bindVertexArray( null );
   },
 
 
   release : function(){
-    var ext = this._vao._ext;
     if( this._handle ){
-      ext.deleteVertexArrayOES( this._handle );
+      this._vao.gl.deleteVertexArray( this._handle );
       this._handle = null;
     }
   }
