@@ -1,6 +1,6 @@
 {
   "name": "nanogl-vao",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "OES_vertex_array_object extension support for nanogl",
   "main": "vao.js",
   "scripts": {
