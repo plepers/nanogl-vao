@@ -1,10 +1,10 @@
 
 
 function shimGL( gl, ext ){
-  gl.bindVertexArray   = function(){ return ext.bindVertexArrayOES  .apply( ext, arguments )};
-  gl.createVertexArray = function(){ return ext.createVertexArrayOES.apply( ext, arguments )};
-  gl.deleteVertexArray = function(){ return ext.deleteVertexArrayOES.apply( ext, arguments )};
-  gl.isVertexArray     = function(){ return ext.isVertexArrayOES    .apply( ext, arguments )};
+  gl.bindVertexArray   = function(){ return ext.bindVertexArrayOES  .apply( ext, arguments );};
+  gl.createVertexArray = function(){ return ext.createVertexArrayOES.apply( ext, arguments );};
+  gl.deleteVertexArray = function(){ return ext.deleteVertexArrayOES.apply( ext, arguments );};
+  gl.isVertexArray     = function(){ return ext.isVertexArrayOES    .apply( ext, arguments );};
 }
 
 /**

@@ -5,6 +5,8 @@
   "main": "vao.js",
   "scripts": {
     "test": "jshint *.js && karma start",
+    "test_gl1": "jshint *.js && karma start",
+    "test_gl2": "jshint *.js && karma start --webgl_version=2",
     "docs": "jsdoc vao.js -R README.md -d ../nanogl_gh_pages -t node_modules/minami"
   },
   "repository": {
