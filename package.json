@@ -4,9 +4,9 @@
   "description": "OES_vertex_array_object extension support for nanogl",
   "main": "vao.js",
   "scripts": {
-    "test": "jshint *.js && karma start",
-    "test_gl1": "jshint *.js && karma start",
-    "test_gl2": "jshint *.js && karma start --webgl_version=2",
+    "test": "tsc && karma start",
+    "test_gl1": "tsc && karma start",
+    "test_gl2": "tsc && karma start --webgl_version=2",
     "docs": "jsdoc vao.js -R README.md -d ../nanogl_gh_pages -t node_modules/minami"
   },
   "repository": {
@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/plepers/nanogl-vao#readme",
   "devDependencies": {
-    "nanogl":"^0.2.6",
     "browserify": "^13.0.0",
     "expect.js": "^0.3.1",
     "jsdoc": "^3.4.0",
@@ -38,5 +37,8 @@
     "stringify": "^3.2.1",
     "uglify-js": "^2.6.1",
     "when": "^3.7.7"
+  },
+  "dependencies": {
+    "nanogl": "^1.0.0"
   }
 }
