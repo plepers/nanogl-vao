@@ -1,6 +1,6 @@
-import Program = require( 'nanogl/program' )
-import GLArrayBuffer = require( 'nanogl/arraybuffer' )
-import GLIndexBuffer = require( 'nanogl/indexbuffer' )
+import Program from 'nanogl/program'
+import GLArrayBuffer from 'nanogl/arraybuffer'
+import GLIndexBuffer from 'nanogl/indexbuffer'
 
 
 function shimGL( gl : any, ext: OES_vertex_array_object ){
@@ -36,7 +36,7 @@ interface IVaoImplementation {
 
 
 
-class Vao {
+export default class Vao {
 
   gl: WebGLRenderingContext | WebGL2RenderingContext;
   _impl: IVaoImplementation;
@@ -213,6 +213,3 @@ class EmulateVao {
   }
 
 }
-
-
-export = Vao

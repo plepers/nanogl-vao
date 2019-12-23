@@ -1,4 +1,3 @@
-"use strict";
 function shimGL(gl, ext) {
     gl.createVertexArray = function () { return ext.createVertexArrayOES(); };
     gl.bindVertexArray = function (array) { return ext.bindVertexArrayOES(array); };
@@ -8,7 +7,7 @@ function shimGL(gl, ext) {
 function isWebgl2(gl) {
     return gl.bindVertexArray !== undefined;
 }
-class Vao {
+export default class Vao {
     constructor(gl) {
         this.gl = gl;
         if (isWebgl2(gl)) {
@@ -106,4 +105,3 @@ class EmulateVao {
     unbind() {
     }
 }
-module.exports = Vao;

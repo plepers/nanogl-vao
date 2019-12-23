@@ -1,6 +1,6 @@
-var ArrayBuffer = require( 'nanogl/arraybuffer' );
-var Program     = require( 'nanogl/program' );
-var Vao         = require( '../vao' );
+import ArrayBuffer from 'nanogl/arraybuffer'
+import Program     from 'nanogl/program'
+import Vao         from '../vao'
 
 var expect  = require( 'expect.js' );
 
