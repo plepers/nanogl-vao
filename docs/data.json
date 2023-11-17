@@ -7,39 +7,23 @@
 	"originalName": "",
 	"children": [
 		{
-			"id": 1,
+			"id": 13,
 			"name": "Vao",
 			"kind": 128,
 			"kindString": "Class",
 			"flags": {},
 			"comment": {
-				"summary": [],
-				"blockTags": [
+				"summary": [
 					{
-						"tag": "@classdesc",
-						"content": [
-							{
-								"kind": "text",
-								"text": "Vao manage attributes pointers setup for given arraybuffer and program\nIt provide a transparent fallback if extension isn't available"
-							}
-						]
-					},
-					{
-						"tag": "@param",
-						"name": "gl",
-						"content": [
-							{
-								"kind": "text",
-								"text": "webgl context the vao belongs to"
-							}
-						]
+						"kind": "text",
+						"text": "This class manages VAOs (Vertex Array Objects).\n\nIt is used to manage attribute pointers setup for given program and buffers, and provides a transparent fallback if VAO extension isn't available."
 					}
 				]
 			},
 			"originalName": "default",
 			"children": [
 				{
-					"id": 2,
+					"id": 14,
 					"name": "constructor",
 					"kind": 512,
 					"kindString": "Constructor",
@@ -47,25 +31,33 @@
 					"sources": [
 						{
 							"fileName": "vao.ts",
-							"line": 44,
+							"line": 57,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/6a0552f/src/vao.ts#L44"
+							"url": "https://github.com/evanmartiin/nanogl-vao/blob/1c5418f/src/vao.ts#L57"
 						}
 					],
 					"signatures": [
 						{
-							"id": 3,
+							"id": 15,
 							"name": "new Vao",
 							"kind": 16384,
 							"kindString": "Constructor signature",
 							"flags": {},
 							"parameters": [
 								{
-									"id": 4,
+									"id": 16,
 									"name": "gl",
 									"kind": 32768,
 									"kindString": "Parameter",
 									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The webgl context this VAO belongs to"
+											}
+										]
+									},
 									"type": {
 										"type": "union",
 										"types": [
@@ -87,43 +79,60 @@
 							],
 							"type": {
 								"type": "reference",
-								"id": 1,
+								"id": 13,
 								"name": "default"
 							}
 						}
 					]
 				},
 				{
-					"id": 6,
+					"id": 18,
 					"name": "_impl",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The implementation of the VAO"
+							}
+						]
+					},
 					"sources": [
 						{
 							"fileName": "vao.ts",
-							"line": 42,
+							"line": 52,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/6a0552f/src/vao.ts#L42"
+							"url": "https://github.com/evanmartiin/nanogl-vao/blob/1c5418f/src/vao.ts#L52"
 						}
 					],
 					"type": {
 						"type": "reference",
+						"id": 1,
 						"name": "IVaoImplementation"
 					}
 				},
 				{
-					"id": 5,
+					"id": 17,
 					"name": "gl",
 					"kind": 1024,
 					"kindString": "Property",
 					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The webgl context this VAO belongs to"
+							}
+						]
+					},
 					"sources": [
 						{
 							"fileName": "vao.ts",
-							"line": 41,
+							"line": 50,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/6a0552f/src/vao.ts#L41"
+							"url": "https://github.com/evanmartiin/nanogl-vao/blob/1c5418f/src/vao.ts#L50"
 						}
 					],
 					"type": {
@@ -145,7 +154,7 @@
 					}
 				},
 				{
-					"id": 14,
+					"id": 26,
 					"name": "bind",
 					"kind": 2048,
 					"kindString": "Method",
@@ -153,14 +162,14 @@
 					"sources": [
 						{
 							"fileName": "vao.ts",
-							"line": 85,
+							"line": 100,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/6a0552f/src/vao.ts#L85"
+							"url": "https://github.com/evanmartiin/nanogl-vao/blob/1c5418f/src/vao.ts#L100"
 						}
 					],
 					"signatures": [
 						{
-							"id": 15,
+							"id": 27,
 							"name": "bind",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -169,7 +178,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "Bind the VAO. Call this method before each draw call"
+										"text": "Bind the VAO.\nYou need to call this method *before* each draw call."
 									}
 								]
 							},
@@ -181,7 +190,7 @@
 					]
 				},
 				{
-					"id": 7,
+					"id": 19,
 					"name": "dispose",
 					"kind": 2048,
 					"kindString": "Method",
@@ -189,14 +198,14 @@
 					"sources": [
 						{
 							"fileName": "vao.ts",
-							"line": 66,
+							"line": 79,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/6a0552f/src/vao.ts#L66"
+							"url": "https://github.com/evanmartiin/nanogl-vao/blob/1c5418f/src/vao.ts#L79"
 						}
 					],
 					"signatures": [
 						{
-							"id": 8,
+							"id": 20,
 							"name": "dispose",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -205,7 +214,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "release the internal webgl vao"
+										"text": "Delete all webgl objects related to this VAO."
 									}
 								]
 							},
@@ -217,7 +226,7 @@
 					]
 				},
 				{
-					"id": 9,
+					"id": 21,
 					"name": "setup",
 					"kind": 2048,
 					"kindString": "Method",
@@ -225,14 +234,14 @@
 					"sources": [
 						{
 							"fileName": "vao.ts",
-							"line": 75,
+							"line": 89,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/6a0552f/src/vao.ts#L75"
+							"url": "https://github.com/evanmartiin/nanogl-vao/blob/1c5418f/src/vao.ts#L89"
 						}
 					],
 					"signatures": [
 						{
-							"id": 10,
+							"id": 22,
 							"name": "setup",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -241,13 +250,13 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "Initialize attrib pointer setup for given program and arraybuffers"
+										"text": "Initialize attrib pointer setup for given program and buffers."
 									}
 								]
 							},
 							"parameters": [
 								{
-									"id": 11,
+									"id": 23,
 									"name": "prg",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -256,7 +265,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "the nanogl Program"
+												"text": "The program to use"
 											}
 										]
 									},
@@ -268,7 +277,7 @@
 									}
 								},
 								{
-									"id": 12,
+									"id": 24,
 									"name": "buffers",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -277,7 +286,7 @@
 										"summary": [
 											{
 												"kind": "text",
-												"text": "an array of ArrayBuffers containing the attributes"
+												"text": "The list of buffers containing the vertex data"
 											}
 										]
 									},
@@ -292,11 +301,19 @@
 									}
 								},
 								{
-									"id": 13,
+									"id": 25,
 									"name": "indices",
 									"kind": 32768,
 									"kindString": "Parameter",
 									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The buffer containing the index data"
+											}
+										]
+									},
 									"type": {
 										"type": "reference",
 										"name": "IndexBuffer",
@@ -313,7 +330,7 @@
 					]
 				},
 				{
-					"id": 16,
+					"id": 28,
 					"name": "unbind",
 					"kind": 2048,
 					"kindString": "Method",
@@ -321,14 +338,14 @@
 					"sources": [
 						{
 							"fileName": "vao.ts",
-							"line": 93,
+							"line": 109,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/6a0552f/src/vao.ts#L93"
+							"url": "https://github.com/evanmartiin/nanogl-vao/blob/1c5418f/src/vao.ts#L109"
 						}
 					],
 					"signatures": [
 						{
-							"id": 17,
+							"id": 29,
 							"name": "unbind",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -337,7 +354,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "Unbind the VAO. Call this method after each draw call"
+										"text": "Unbind the VAO.\nYou need to call this method *after* each draw call."
 									}
 								]
 							},
@@ -353,32 +370,272 @@
 				{
 					"title": "Constructors",
 					"children": [
-						2
+						14
 					]
 				},
 				{
 					"title": "Properties",
 					"children": [
-						6,
-						5
+						18,
+						17
 					]
 				},
 				{
 					"title": "Methods",
 					"children": [
-						14,
-						7,
-						9,
-						16
+						26,
+						19,
+						21,
+						28
 					]
 				}
 			],
 			"sources": [
 				{
 					"fileName": "vao.ts",
-					"line": 39,
+					"line": 48,
 					"character": 21,
-					"url": "https://github.com/evanmartiin/nanogl-vao/blob/6a0552f/src/vao.ts#L39"
+					"url": "https://github.com/evanmartiin/nanogl-vao/blob/1c5418f/src/vao.ts#L48"
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "IVaoImplementation",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {},
+			"children": [
+				{
+					"id": 9,
+					"name": "bind",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "vao.ts",
+							"line": 33,
+							"character": 2,
+							"url": "https://github.com/evanmartiin/nanogl-vao/blob/1c5418f/src/vao.ts#L33"
+						}
+					],
+					"signatures": [
+						{
+							"id": 10,
+							"name": "bind",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Bind the VAO."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 2,
+					"name": "dispose",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "vao.ts",
+							"line": 22,
+							"character": 2,
+							"url": "https://github.com/evanmartiin/nanogl-vao/blob/1c5418f/src/vao.ts#L22"
+						}
+					],
+					"signatures": [
+						{
+							"id": 3,
+							"name": "dispose",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Delete all webgl objects related to this VAO."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 4,
+					"name": "setup",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "vao.ts",
+							"line": 29,
+							"character": 2,
+							"url": "https://github.com/evanmartiin/nanogl-vao/blob/1c5418f/src/vao.ts#L29"
+						}
+					],
+					"signatures": [
+						{
+							"id": 5,
+							"name": "setup",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Initialize attrib pointer setup for given program and buffers."
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 6,
+									"name": "prg",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The program to use"
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"name": "Program",
+										"qualifiedName": "Program",
+										"package": "nanogl"
+									}
+								},
+								{
+									"id": 7,
+									"name": "buffers",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The list of buffers containing the vertex data"
+											}
+										]
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"name": "ArrayBuffer",
+											"qualifiedName": "ArrayBuffer",
+											"package": "nanogl"
+										}
+									}
+								},
+								{
+									"id": 8,
+									"name": "indices",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"summary": [
+											{
+												"kind": "text",
+												"text": "The buffer containing the index data"
+											}
+										]
+									},
+									"type": {
+										"type": "reference",
+										"name": "IndexBuffer",
+										"qualifiedName": "IndexBuffer",
+										"package": "nanogl"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 11,
+					"name": "unbind",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "vao.ts",
+							"line": 37,
+							"character": 2,
+							"url": "https://github.com/evanmartiin/nanogl-vao/blob/1c5418f/src/vao.ts#L37"
+						}
+					],
+					"signatures": [
+						{
+							"id": 12,
+							"name": "unbind",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Unbind the VAO."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"children": [
+						9,
+						2,
+						4,
+						11
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "vao.ts",
+					"line": 18,
+					"character": 17,
+					"url": "https://github.com/evanmartiin/nanogl-vao/blob/1c5418f/src/vao.ts#L18"
 				}
 			]
 		}
@@ -386,6 +643,12 @@
 	"groups": [
 		{
 			"title": "Classes",
+			"children": [
+				13
+			]
+		},
+		{
+			"title": "Interfaces",
 			"children": [
 				1
 			]
@@ -396,7 +659,7 @@
 			"fileName": "vao.ts",
 			"line": 1,
 			"character": 0,
-			"url": "https://github.com/evanmartiin/nanogl-vao/blob/6a0552f/src/vao.ts#L1"
+			"url": "https://github.com/evanmartiin/nanogl-vao/blob/1c5418f/src/vao.ts#L1"
 		}
 	]
 }
