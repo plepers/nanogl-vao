@@ -15,7 +15,7 @@ function isWebgl2(gl: WebGLRenderingContext | WebGL2RenderingContext): gl is Web
 }
 
 
-interface IVaoImplementation {
+export interface IVaoImplementation {
   /**
    * Delete all webgl objects related to this VAO.
    */
