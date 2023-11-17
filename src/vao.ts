@@ -16,10 +16,24 @@ function isWebgl2(gl: WebGLRenderingContext | WebGL2RenderingContext): gl is Web
 
 
 interface IVaoImplementation {
-
+  /**
+   * Delete all webgl objects related to this VAO.
+   */
   dispose() : void;
+  /**
+   * Initialize attrib pointer setup for given program and buffers.
+   * @param {Program} prg The program to use
+   * @param {ArrayBuffer[]} buffers The list of buffers containing the vertex data
+   * @param {GLIndexBuffer} indices The buffer containing the index data
+   */
   setup( prg : Program, buffers : GLArrayBuffer[], indices : GLIndexBuffer ) : void;
+  /**
+   * Bind the VAO.
+   */
   bind() : void;
+  /**
+   * Unbind the VAO.
+   */
   unbind() : void;
 
 }
@@ -27,20 +41,19 @@ interface IVaoImplementation {
 
 
 /**
- * @class
- * @classdesc Vao manage attributes pointers setup for given arraybuffer and program
- * It provide a transparent fallback if extension isn't available
+ * This class manages VAOs (Vertex Array Objects).
  *
- *  @param {WebGLRenderingContext} gl webgl context the vao belongs to
+ * It is used to manage attribute pointers setup for given program and buffers, and provides a transparent fallback if VAO extension isn't available.
  */
-
-
-
 export default class Vao {
-
+  /** The webgl context this VAO belongs to */
   gl: WebGLRenderingContext | WebGL2RenderingContext;
+  /** The implementation of the VAO */
   _impl: IVaoImplementation;
 
+  /**
+   * @param {WebGLRenderingContext | WebGL2RenderingContext} gl  The webgl context this VAO belongs to
+   */
   constructor( gl : WebGLRenderingContext | WebGL2RenderingContext ){
     this.gl = gl;
 
@@ -61,16 +74,17 @@ export default class Vao {
 
 
   /**
-    * release the internal webgl vao
+    * Delete all webgl objects related to this VAO.
     */
   dispose(){
     this._impl.dispose();
   }
 
   /**
-   * Initialize attrib pointer setup for given program and arraybuffers
-   *   @param {Program} prg the nanogl Program
-   *   @param {ArrayBuffer[]} buffers an array of ArrayBuffers containing the attributes
+   * Initialize attrib pointer setup for given program and buffers.
+   * @param {Program} prg The program to use
+   * @param {ArrayBuffer[]} buffers The list of buffers containing the vertex data
+   * @param {GLIndexBuffer} indices The buffer containing the index data
    */
   setup( prg : Program, buffers : GLArrayBuffer[], indices : GLIndexBuffer ){
     if( !prg.ready ){
@@ -80,7 +94,8 @@ export default class Vao {
   }
 
   /**
-   * Bind the VAO. Call this method before each draw call
+   * Bind the VAO.
+   * You need to call this method *before* each draw call.
    */
   bind(){
     this._impl.bind();
@@ -88,7 +103,8 @@ export default class Vao {
 
 
   /**
-   * Unbind the VAO. Call this method after each draw call
+   * Unbind the VAO.
+   * You need to call this method *after* each draw call.
    */
   unbind(){
     this._impl.unbind();
@@ -107,8 +123,8 @@ class NativeVao {
   _gl : WebGL2RenderingContext;
   _vao: Vao;
   _handle: WebGLVertexArrayObject | null;
-  
-  
+
+
   constructor( vao : Vao ){
     this._vao = vao;
     this._gl = this._vao.gl as WebGL2RenderingContext;
