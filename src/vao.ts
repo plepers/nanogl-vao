@@ -14,7 +14,7 @@ function isWebgl2(gl: WebGLRenderingContext | WebGL2RenderingContext): gl is Web
   return (gl as WebGL2RenderingContext).bindVertexArray !== undefined;
 }
 
-
+/** The implementation of a webgl VAO. */
 export interface IVaoImplementation {
   /**
    * Delete all webgl objects related to this VAO.
