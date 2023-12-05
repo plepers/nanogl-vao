@@ -33,7 +33,7 @@
 							"fileName": "vao.ts",
 							"line": 57,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/3c9754a/src/vao.ts#L57"
+							"url": "https://github.com/plepers/nanogl-vao/blob/a7e552f/src/vao.ts#L57"
 						}
 					],
 					"signatures": [
@@ -104,7 +104,7 @@
 							"fileName": "vao.ts",
 							"line": 52,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/3c9754a/src/vao.ts#L52"
+							"url": "https://github.com/plepers/nanogl-vao/blob/a7e552f/src/vao.ts#L52"
 						}
 					],
 					"type": {
@@ -132,7 +132,7 @@
 							"fileName": "vao.ts",
 							"line": 50,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/3c9754a/src/vao.ts#L50"
+							"url": "https://github.com/plepers/nanogl-vao/blob/a7e552f/src/vao.ts#L50"
 						}
 					],
 					"type": {
@@ -164,7 +164,7 @@
 							"fileName": "vao.ts",
 							"line": 100,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/3c9754a/src/vao.ts#L100"
+							"url": "https://github.com/plepers/nanogl-vao/blob/a7e552f/src/vao.ts#L100"
 						}
 					],
 					"signatures": [
@@ -200,7 +200,7 @@
 							"fileName": "vao.ts",
 							"line": 79,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/3c9754a/src/vao.ts#L79"
+							"url": "https://github.com/plepers/nanogl-vao/blob/a7e552f/src/vao.ts#L79"
 						}
 					],
 					"signatures": [
@@ -236,7 +236,7 @@
 							"fileName": "vao.ts",
 							"line": 89,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/3c9754a/src/vao.ts#L89"
+							"url": "https://github.com/plepers/nanogl-vao/blob/a7e552f/src/vao.ts#L89"
 						}
 					],
 					"signatures": [
@@ -340,7 +340,7 @@
 							"fileName": "vao.ts",
 							"line": 109,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/3c9754a/src/vao.ts#L109"
+							"url": "https://github.com/plepers/nanogl-vao/blob/a7e552f/src/vao.ts#L109"
 						}
 					],
 					"signatures": [
@@ -395,7 +395,7 @@
 					"fileName": "vao.ts",
 					"line": 48,
 					"character": 21,
-					"url": "https://github.com/evanmartiin/nanogl-vao/blob/3c9754a/src/vao.ts#L48"
+					"url": "https://github.com/plepers/nanogl-vao/blob/a7e552f/src/vao.ts#L48"
 				}
 			]
 		},
@@ -425,7 +425,7 @@
 							"fileName": "vao.ts",
 							"line": 33,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/3c9754a/src/vao.ts#L33"
+							"url": "https://github.com/plepers/nanogl-vao/blob/a7e552f/src/vao.ts#L33"
 						}
 					],
 					"signatures": [
@@ -461,7 +461,7 @@
 							"fileName": "vao.ts",
 							"line": 22,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/3c9754a/src/vao.ts#L22"
+							"url": "https://github.com/plepers/nanogl-vao/blob/a7e552f/src/vao.ts#L22"
 						}
 					],
 					"signatures": [
@@ -497,7 +497,7 @@
 							"fileName": "vao.ts",
 							"line": 29,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/3c9754a/src/vao.ts#L29"
+							"url": "https://github.com/plepers/nanogl-vao/blob/a7e552f/src/vao.ts#L29"
 						}
 					],
 					"signatures": [
@@ -601,7 +601,7 @@
 							"fileName": "vao.ts",
 							"line": 37,
 							"character": 2,
-							"url": "https://github.com/evanmartiin/nanogl-vao/blob/3c9754a/src/vao.ts#L37"
+							"url": "https://github.com/plepers/nanogl-vao/blob/a7e552f/src/vao.ts#L37"
 						}
 					],
 					"signatures": [
@@ -643,7 +643,7 @@
 					"fileName": "vao.ts",
 					"line": 18,
 					"character": 17,
-					"url": "https://github.com/evanmartiin/nanogl-vao/blob/3c9754a/src/vao.ts#L18"
+					"url": "https://github.com/plepers/nanogl-vao/blob/a7e552f/src/vao.ts#L18"
 				}
 			]
 		}
@@ -667,7 +667,7 @@
 			"fileName": "vao.ts",
 			"line": 1,
 			"character": 0,
-			"url": "https://github.com/evanmartiin/nanogl-vao/blob/3c9754a/src/vao.ts#L1"
+			"url": "https://github.com/plepers/nanogl-vao/blob/a7e552f/src/vao.ts#L1"
 		}
 	]
 }
